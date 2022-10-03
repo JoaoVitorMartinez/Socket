@@ -11,44 +11,46 @@ import (
 	"time"
 )
 
+// Função Seno
 func seno(s []string) string {
 	co, _ := strconv.ParseFloat(s[0], 64)
 	hi, _ := strconv.ParseFloat(s[2], 64)
 
 	seno := co / hi
 	senoConvertido := strconv.FormatFloat(seno, 'f', -1, 64)
-	return "Seno: " + senoConvertido
-
+	return "\nSeno:" + senoConvertido
 }
 
+// Função Coseno
 func coseno(s []string) string {
 	ca, _ := strconv.ParseFloat(s[1], 64)
 	hi, _ := strconv.ParseFloat(s[2], 64)
 
 	coseno := ca / hi
 	cosenoConvertido := strconv.FormatFloat(coseno, 'f', -1, 64)
-	return "\nCoseno: " + cosenoConvertido
-
+	return "\nCoseno:" + cosenoConvertido
 }
 
+// Função Tangente
 func tangente(s []string) string {
 	co, _ := strconv.ParseFloat(s[0], 64)
 	ca, _ := strconv.ParseFloat(s[1], 64)
 
 	tangente := co / ca
 	tangenteConvertida := strconv.FormatFloat(tangente, 'f', -1, 64)
-	return "\nTangente: " + tangenteConvertida
+	return "\nTangente:" + tangenteConvertida
 
 }
 
 func main() {
+	var (
+		ResultadoSeno     string
+		ResultadoCoseno   string
+		ResultadoTangente string
+		wg                sync.WaitGroup
+	)
 
 	fmt.Println("Servidor aguardando conexões...")
-
-	var wg sync.WaitGroup
-	// chSeno := make(chan string)
-	// chCoseno := make(chan string)
-	// chTangente := make(chan string)
 
 	// ouvindo na porta 8081 via protocolo tcp/ip
 	ln, erro1 := net.Listen("tcp", ":8081")
@@ -86,15 +88,17 @@ func main() {
 		go func(wg *sync.WaitGroup) string {
 			defer wg.Done()
 
-			// chSeno <- seno(valoresDoTriangulo)
+			ResultadoSeno = seno(valoresDoTriangulo)
+
 			time.Sleep(1 * time.Second)
+
 			fmt.Println("fim go routine 1...")
 			return "chSeno"
 		}(&wg)
 
 		go func(wg *sync.WaitGroup) string {
 			defer wg.Done()
-			// chTangente <- tangente(valoresDoTriangulo)
+			ResultadoTangente = tangente(valoresDoTriangulo)
 			fmt.Println("fim go routine 3...")
 
 			return "chTangente"
@@ -106,7 +110,7 @@ func main() {
 			time.Sleep(3 * time.Second)
 			// fmt.Println(<-chSeno)
 
-			// chCoseno <- coseno(valoresDoTriangulo)
+			ResultadoCoseno = coseno(valoresDoTriangulo)
 
 			fmt.Println("fim go routine 2...")
 			return "chCoseno"
@@ -128,7 +132,7 @@ func main() {
 
 		// conexao.Write([]byte(string(s + sn + t + "\r\n")))
 
-		conexao.Write([]byte(string(mensagem + "\r\n")))
+		conexao.Write([]byte(string(ResultadoSeno + ResultadoCoseno + ResultadoTangente + " ")))
 
 	}
 }

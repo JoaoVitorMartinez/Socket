@@ -16,6 +16,7 @@ var (
 func main() {
 
 	// conectando na porta 8081 via protocolo tcp/ip na máquina local
+	// fica tentando se conectar em caso de falha e que o servidor não foi parado de forma abrupta
 	for {
 		fmt.Println("Conectando ao servidor...")
 		conn, err = net.Dial("tcp", "127.0.0.1:8081")
