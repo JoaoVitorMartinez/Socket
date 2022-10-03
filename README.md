@@ -30,7 +30,7 @@ Consulte **Instalação** para saber como implantar o projeto.
   - Feito isso você deve inserir os valores separados por espaço e enviar pressionando **"Enter"**;
   - Após isso os valores serão enviar ao servidor e o resultado será retornado ao cliente informando a área do triângulo;
 
-**Obs: Após inserir o último valor também é necessário pressionar espaço**
+**Obs: Após inserir o último valor também é necessário pressionar espaço.**
 
 ## 📋 Detalhando o código
 
