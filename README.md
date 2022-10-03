@@ -123,13 +123,13 @@ func main() {
 			
 ### - Nessa parte o servidor.go devolve o resultado ao cliente.go e o mesmo printa o resultado:
 
-**servidor.go**
+  **servidor.go**
 
-  conexao.Write([]byte(string(mensagem + "\r\n")))
+     conexao.Write([]byte(string(mensagem + "\r\n")))
   
-**cliente.go**
+  **cliente.go**
   
-  fmt.Println("Resposta do servidor: " + resp)
+     fmt.Println("Resposta do servidor: " + resp)
   
 --- 
 
