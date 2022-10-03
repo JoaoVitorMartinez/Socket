@@ -143,8 +143,8 @@ Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as vers�
 
 ## ✒️ Autores
 
-* **João Vitor**(https://github.com/JoaoVitorMartinez) - [Desenvolvimento & Documentoção]
-* **Rodrigo Vitor**(https://github.com/RodrigoSVG) - [Desenvolvimento & Documentoção]
+* **[João Vitor]**(https://github.com/JoaoVitorMartinez) - [Desenvolvimento & Documentoção]
+* **[Rodrigo Gonçalves]**(https://github.com/RodrigoSVG) - [Desenvolvimento & Documentoção]
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
 
