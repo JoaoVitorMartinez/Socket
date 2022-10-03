@@ -73,16 +73,16 @@ func main() {
       
 ### - Aqui podemos verificar como o cliente.go captura as entradas sem o \r\n:
 
-   for {
-	leitor := bufio.NewReader(os.Stdin)
-	fmt.Print("Entre com os valores do triângulo (Cateto oposto, adjacente e hipotetusa): ")
-	co, err := leitor.ReadString(' ')
-	ca, err := leitor.ReadString(' ')
-	h, err := leitor.ReadString(' ')
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(3)
-	}
+     for {
+	 leitor := bufio.NewReader(os.Stdin)
+	 fmt.Print("Entre com os valores do triângulo (Cateto oposto, adjacente e hipotetusa): ")
+	 co, err := leitor.ReadString(' ')
+	 ca, err := leitor.ReadString(' ')
+	 h, err := leitor.ReadString(' ')
+	 if err != nil {
+		 fmt.Println(err)
+		 os.Exit(3)
+	 }
 	
 	
 ### - Aqui podemos ver como o servidor.go processa a mensagem recebida e efetua o cálculo utilizando as Go Rotines:
