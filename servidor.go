@@ -108,7 +108,6 @@ func main() {
 		go func(wg *sync.WaitGroup) string {
 			defer wg.Done()
 			time.Sleep(3 * time.Second)
-			// fmt.Println(<-chSeno)
 
 			ResultadoCoseno = coseno(valoresDoTriangulo)
 
@@ -121,16 +120,6 @@ func main() {
 		wg.Wait()
 
 		fmt.Println("Fim...")
-
-		// s := <-chSeno
-		// sn := <-chCoseno
-		// t := <-chTangente
-
-		// close(chSeno)
-		// close(chCoseno)
-		// close(chTangente)
-
-		// conexao.Write([]byte(string(s + sn + t + "\r\n")))
 
 		conexao.Write([]byte(string(ResultadoSeno + ResultadoCoseno + ResultadoTangente + " ")))
 
