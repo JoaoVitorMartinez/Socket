@@ -140,8 +140,8 @@ func main() {
 
 ## ✒️ Autores
 
-* [**João Vitor**](https://github.com/JoaoVitorMartinez) - Desenvolvimento & Documentoção
-* [**Rodrigo Gonçalves**](https://github.com/RodrigoSVG) - Desenvolvimento & Documentoção
+* [**João Vitor Martinez**](https://github.com/JoaoVitorMartinez) - Desenvolvimento & Documentoção
+* [**Rodrigo Vitor Gonçalves**](https://github.com/RodrigoSVG) - Desenvolvimento & Documentoção
 
 
 ---
