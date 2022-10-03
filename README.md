@@ -142,18 +142,5 @@ func main() {
 * [**João Vitor**](https://github.com/JoaoVitorMartinez) - Desenvolvimento & Documentoção
 * [**Rodrigo Gonçalves**](https://github.com/RodrigoSVG) - Desenvolvimento & Documentoção
 
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
 
 ---
