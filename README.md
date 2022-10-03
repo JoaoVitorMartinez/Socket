@@ -137,10 +137,6 @@ func main() {
 
 * [Golang](https://go.dev/)
 
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
 ## ✒️ Autores
 
 * [**João Vitor**](https://github.com/JoaoVitorMartinez) - Desenvolvimento & Documentoção
