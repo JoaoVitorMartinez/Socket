@@ -26,7 +26,7 @@ Consulte **Instalação** para saber como implantar o projeto.
 
   - Execute o arquivo **servidor.go**, você receberá a mensagem **"Servidor aguardando conexões..."**;
   - Execute o arquivo **cliente.go**, após isso você deve receber a mensagem **"Conexão aceita..."** isso indica que a conexão está funcionando;
-  - Executandop os arquivos a mensagem **"Entre com os valores do triângulo (Cateto oposto, adjacente e hipotetusa):"** será exibida na tela do cliente;
+  - Executando os arquivos a mensagem **"Entre com os valores do triângulo (Cateto oposto, adjacente e hipotetusa):"** será exibida na tela do cliente;
   - Feito isso você deve inserir os valores separados por espaço;
   - Após isso a conexão já está funcionando e o projeto pode ser executado corretamente;
   
