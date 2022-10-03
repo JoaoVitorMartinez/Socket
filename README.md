@@ -27,9 +27,10 @@ Consulte **Instalação** para saber como implantar o projeto.
   - Execute o arquivo **servidor.go**, você receberá a mensagem **"Servidor aguardando conexões..."**;
   - Execute o arquivo **cliente.go**, após isso você deve receber a mensagem **"Conexão aceita..."** isso indica que a conexão está funcionando;
   - Executando os arquivos a mensagem **"Entre com os valores do triângulo (Cateto oposto, adjacente e hipotetusa):"** será exibida na tela do cliente;
-  - Feito isso você deve inserir os valores separados por espaço;
+  - Feito isso você deve inserir os valores separados por espaço e enviar pressionando **"Enter"**;
   - Após isso os valores serão enviar ao servidor e o resultado será retornado ao cliente informando a área do triângulo;
 
+**Obs: Após inserir o último valor também é necessário pressionar espaço**
 
 ## 📋 Detalhando o código
 
