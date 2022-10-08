@@ -11,10 +11,16 @@ import (
 	"time"
 )
 
+type Triangulo struct {
+	catetoOposto    string
+	catetoAdjacente string
+	hipotenusa      string
+}
+
 // Função Seno
-func seno(s []string) string {
-	co, _ := strconv.ParseFloat(s[0], 64)
-	hi, _ := strconv.ParseFloat(s[2], 64)
+func seno(triangulo Triangulo) string {
+	co, _ := strconv.ParseFloat(triangulo.catetoOposto, 64)
+	hi, _ := strconv.ParseFloat(triangulo.hipotenusa, 64)
 
 	seno := co / hi
 	senoConvertido := strconv.FormatFloat(seno, 'f', -1, 64)
@@ -22,9 +28,9 @@ func seno(s []string) string {
 }
 
 // Função Coseno
-func coseno(s []string) string {
-	ca, _ := strconv.ParseFloat(s[1], 64)
-	hi, _ := strconv.ParseFloat(s[2], 64)
+func coseno(triangulo Triangulo) string {
+	ca, _ := strconv.ParseFloat(triangulo.catetoAdjacente, 64)
+	hi, _ := strconv.ParseFloat(triangulo.hipotenusa, 64)
 
 	coseno := ca / hi
 	cosenoConvertido := strconv.FormatFloat(coseno, 'f', -1, 64)
@@ -32,9 +38,9 @@ func coseno(s []string) string {
 }
 
 // Função Tangente
-func tangente(s []string) string {
-	co, _ := strconv.ParseFloat(s[0], 64)
-	ca, _ := strconv.ParseFloat(s[1], 64)
+func tangente(triangulo Triangulo) string {
+	co, _ := strconv.ParseFloat(triangulo.catetoOposto, 64)
+	ca, _ := strconv.ParseFloat(triangulo.catetoAdjacente, 64)
 
 	tangente := co / ca
 	tangenteConvertida := strconv.FormatFloat(tangente, 'f', -1, 64)
@@ -84,11 +90,17 @@ func main() {
 
 		fmt.Print("Mensagem recebida:", valoresDoTriangulo)
 
+		triangulo := Triangulo{
+			catetoOposto:    valoresDoTriangulo[0],
+			catetoAdjacente: valoresDoTriangulo[1],
+			hipotenusa:      valoresDoTriangulo[2],
+		}
+
 		wg.Add(3)
 		go func(wg *sync.WaitGroup) string {
 			defer wg.Done()
 
-			ResultadoSeno = seno(valoresDoTriangulo)
+			ResultadoSeno = seno(triangulo)
 
 			time.Sleep(1 * time.Second)
 
@@ -98,7 +110,7 @@ func main() {
 
 		go func(wg *sync.WaitGroup) string {
 			defer wg.Done()
-			ResultadoTangente = tangente(valoresDoTriangulo)
+			ResultadoTangente = tangente(triangulo)
 			fmt.Println("fim go routine 3...")
 
 			return "chTangente"
@@ -109,7 +121,7 @@ func main() {
 			defer wg.Done()
 			time.Sleep(3 * time.Second)
 
-			ResultadoCoseno = coseno(valoresDoTriangulo)
+			ResultadoCoseno = coseno(triangulo)
 
 			fmt.Println("fim go routine 2...")
 			return "chCoseno"
